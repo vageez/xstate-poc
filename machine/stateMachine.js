@@ -7,17 +7,11 @@ import { states } from './states'
 const stateMachine = Machine({
   id: 'signerMachine',
   initial: 'authenticate',
-  context: { ... context },
-  states: {
-    ...states
-  },
+  context,
+  states
 })
 
 export const enhancedStateMachine = stateMachine.withConfig({
-  actions: {
-    ...actions
-  },
-  guards: {
-    ...guards
-  },
+  actions,
+  guards
 })
